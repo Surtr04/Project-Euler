@@ -63,8 +63,37 @@ def generatePrime(limit)
 
 end
 
+#tmp code to generate primes
+=begin
+arr = generatePrime(1_000_000)
 
-arr = generatePrime(1000000)
+fout = File.new("primes","w")
 
-p arr
+i = arr.size - 1
+while i >= 0 do 
+	fout.write(arr.shift)
+	fout.write(",") unless arr.size == 0
+	i-=1 
+end
+=end
+
+fin = File.open("primes")
+
+str = String.new
+
+fin.each do |x|
+	str << x
+end
+arr = str.split(",").map do |x|
+	x.to_i
+end
+
+
+arr.reject { |x|
+	not x.isCircular?
+}
+
+
+
+
 
