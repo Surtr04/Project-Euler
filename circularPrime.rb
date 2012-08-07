@@ -1,7 +1,5 @@
 #problem 35
 
-require 'set'
-$set = Set.new
 
 class Integer 
 
@@ -51,16 +49,22 @@ class Integer
 
 end
 
-sum = 0
+def generatePrime(limit)
 
-(2..1_000_000).each do |x|
-	if not $set.include? x and x.isCircular?
-		sum+=1
+	arr = Array.new
+
+	arr << 2
+
+	(3..limit).step(2) do |x|
+		arr << x if x.isPrime?
 	end
+
+	return arr
+
 end
 
-p $set.sort
-print "\n"
-p $set.size
-p sum
+
+arr = generatePrime(1000000)
+
+p arr
 
