@@ -30,7 +30,7 @@ class Integer
 	end
 
 	def isCircular?
-		tmp = rotations = self.to_s.length
+		tmp = rotations = self.to_s.length-1
 
 		a = self
 
@@ -39,7 +39,7 @@ class Integer
 			rotations -= 1
 		end
 
-		if rotations == 0
+		if rotations == 0 and a.isP
 			return true
 		else
 			return false
@@ -93,7 +93,10 @@ arr.reject { |x|
 	not x.isCircular?
 }
 
+p arr
+p arr.size
 
+#result 55
 
 
 
