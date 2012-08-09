@@ -1,6 +1,6 @@
 #problem 15
 
-#reduce - recursion --> reduce(caso paragem,simbolo) --> tipo foldr
+#reduce - recursion --> foldr
 class Integer 
 	def factorial
 		(1..self).reduce(1,:*)
