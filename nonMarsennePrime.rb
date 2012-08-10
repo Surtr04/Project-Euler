@@ -40,4 +40,4 @@ end
 
 res = 28433 * mod_exp(2,7830457,10**10) + 1
 
-p res.to_s.drop(10)
+p res.to_s
