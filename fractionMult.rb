@@ -2,13 +2,11 @@
 
 
 i = String.new
-sum = 0
+s = 0
 
 while i.length != 1_000_001  do
-	
-	i << sum.to_s
-	sum += 1
-
+	i << s.to_s
+	s += 1
 end
 
 i.insert 1 , '.'
